@@ -18,8 +18,10 @@
     text-align: center;
 }
 .cities-found{
-    height: 20%;
+    height: 10%;
     margin-top: 10%;
+    font-size: 30px;
+    
 }
 .km-left{
     height: 20%;
@@ -27,6 +29,7 @@
 .question{
     height: 30%;
     color:khaki;
+    font-size: 30px;
     
 }
 
