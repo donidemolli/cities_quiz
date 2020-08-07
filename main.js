@@ -35,7 +35,7 @@ function init(){
 
         document.querySelector('.map').addEventListener('click', function(){
 
-            if(score>0 && capitalCities.length>0){
+            if(score>0){
                 var i = Math.floor(Math.random()*capitalCities.length);
                 var latitude = parseFloat(capitalCities[i].latitude);
                 var longitude = parseFloat(capitalCities[i].longitude);
@@ -77,13 +77,18 @@ function init(){
                         var response = "You found it!!!"
                         capitalCities.splice(i,1);
                         cities++;
+                        if(capitalCities.length<1){
+                            quest.innerHTML = "You won the game"
+                            alert("You won the game");
+                        }
                     }else{
                         var response = "You are " + dist.toFixed(2) +" km away from "+capitalCities[i].capitalCity
                         score = score - dist;
                         score = score.toFixed(2);
                         if(score<0){
                             score=0;
-                            response = response + "\nYou have 0 kilometres left\nGAME OVER"
+                            quest.innerHTML = "GAME OVER!"
+                            alert("You have 0 kilometres left\nGAME OVER")
                         }
                     }
                     responseTXT.innerHTML = response;

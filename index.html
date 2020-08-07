@@ -8,16 +8,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./libs/v6.4.3-dist/ol.js"></script>
     <script type="text/javascript" src="capitalCities.json"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="info">
-            <div class="cities-found">0 Cities found</div>
-            <div class="km-left">You have 1500 km left</div>
-            <div class="question">Tap on the map to start!</div>
-            <div class="response">Good Luck</div>
+    <div class="row container-fluid">
+        <div class="col-xs-3 info">
+            <div class="row important-info">
+                <div class="cities-found">0 Cities found</div>
+                <div class="km-left">You have 1500 km left</div>
+            </div>
+            <div class="row questions">
+                <div class="question">Tap on the map to start!</div>
+                <div class="response">Good Luck</div>
+            </div>
         </div>
-        <div id="js-map" class="map"></div>
+        <div id="js-map" class="col-xs-9 map"></div>
     </div>
     <script src="./main.js"></script>
 </body>

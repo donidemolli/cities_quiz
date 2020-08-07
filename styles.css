@@ -17,24 +17,21 @@
     color: lightblue;
     text-align: center;
 }
+.important-info{
+    height: 40%;
+}
+    
 .cities-found{
-    height: 10%;
     margin-top: 10%;
     font-size: 30px;
-    
 }
-.km-left{
-    height: 20%;
-}
+
 .question{
-    height: 30%;
+    height: 40%;
     color:khaki;
-    font-size: 30px;
-    
+    font-size: 25px;
 }
 
 .response{
-    height:30%;
     color:lightpink;
-    
 }
