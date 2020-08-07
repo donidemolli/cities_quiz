@@ -1,0 +1,37 @@
+#js-map{
+    height: 100%;
+    width: 80%;
+    margin: 0;
+    float: right;
+    text-align: center;
+    background-color:lightblue;
+}
+.container{
+    display: inline;
+}
+.info{
+    width:20%;
+    height:100%;
+    float: left;
+    background-color: grey;
+    color: lightblue;
+    text-align: center;
+}
+.cities-found{
+    height: 20%;
+    margin-top: 10%;
+}
+.km-left{
+    height: 20%;
+}
+.question{
+    height: 30%;
+    color:khaki;
+    
+}
+
+.response{
+    height:30%;
+    color:lightpink;
+    
+}
