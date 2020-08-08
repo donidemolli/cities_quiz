@@ -103,7 +103,7 @@ function init(){
                 alert("GAME OVER\nYou found "+cities+" out of 9 cities\nYou have "+score+" km left");
                 setTimeout(function(){
                     questDiv.style.cssText = "visibility:hidden; height:0";
-                    playAgain.style.cssText = "visibility:visible; height: 33%";
+                    playAgain.style.cssText = "visibility:visible; height: 30%";
                 },2000)
             }
         })
