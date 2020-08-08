@@ -1,6 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body {
+    height:100%;
+}
+
 #js-map{
+
     height: 100%;
-    width: 80%;
     margin: 0;
     float: right;
     text-align: center;
@@ -10,7 +18,6 @@
     display: inline;
 }
 .info{
-    width:20%;
     height:100%;
     float: left;
     background-color: grey;
@@ -18,20 +25,52 @@
     text-align: center;
 }
 .important-info{
-    height: 40%;
+    height: 34%;
 }
     
 .cities-found{
-    margin-top: 10%;
     font-size: 30px;
 }
 
+.questiondiv{
+    height: 33%;   
+}
 .question{
-    height: 40%;
     color:khaki;
     font-size: 25px;
 }
 
 .response{
     color:lightpink;
+}
+.play-again{
+    visibility: hidden;
+    color: maroon;
+    font-size: x-large;
+    font-weight: bold;
+    align-content: center;
+    text-align: center;
+}
+.play-again p{
+    cursor: pointer;
+}
+.play-again p:hover{
+    color: magenta;
+}
+@media (max-width: 1000px){
+    #js-map{
+        height: auto;
+    }
+    .info{
+        height:auto;
+    }
+    .questiondiv{
+        height: auto;   
+    }
+    .important-info{
+        height: auto;
+    }
+    .play-again{
+        height: auto;
+    }
 }
