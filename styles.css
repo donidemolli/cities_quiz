@@ -60,10 +60,10 @@ html,body {
 }
 @media (max-width: 640px){
     #js-map{
-        height: 75%;
+        height: 72%;
     }
     .info{
-        height: 25%;
+        height: 28%;
     }
     .questiondiv{
         height: auto;   
