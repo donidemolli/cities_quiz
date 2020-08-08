@@ -23,6 +23,7 @@ html,body {
     background-color: grey;
     color: lightblue;
     text-align: center;
+    border: 2px lightblue solid;
 }
 .important-info{
     height: 34%;
@@ -59,10 +60,10 @@ html,body {
 }
 @media (max-width: 1000px){
     #js-map{
-        height: 65%;
+        height: 60%;
     }
     .info{
-        height:35%;
+        height:40%;
     }
     .questiondiv{
         height: auto;   
