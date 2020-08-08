@@ -115,8 +115,11 @@ html,body {
     .questiondiv{
         margin-top: 30px;   
     }
+    .play-again{
+        height: 0;
+    }
 }
-@media(max-height: 400px){
+@media(max-height: 425px )and (max-width: 425px){
     #js-map{
         height: 50%;
     }
