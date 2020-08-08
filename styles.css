@@ -59,13 +59,16 @@ html,body {
 }
 @media (max-width: 1000px){
     #js-map{
-        height: auto;
+        height: 65%;
     }
     .info{
-        height:auto;
+        height:35%;
     }
     .questiondiv{
         height: auto;   
+    }
+    .responsediv{
+        height: auto;
     }
     .important-info{
         height: auto;
