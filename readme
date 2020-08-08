@@ -1,0 +1,4 @@
+The application works on most devices and browers (Google Chrome, Safari, Opera, FireFox, all iPhones, Samsung)
+The player has one try to find each city from the list of cities, and 1500 km of distance to spend, when the list is empty, the user receives his/her result (How many cities got found and how many kilometres he didn't have to use to find the cities)
+
+We could upgrade the app, by adding a timer. So when the game is over, the user recieves the information of how much time he spent finding the cities
