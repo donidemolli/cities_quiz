@@ -102,12 +102,11 @@ function init(){
                 }
                 quest.innerHTML = "GAME OVER";
                 kmLeft.innerHTML ="You have "+ score + " km left";
-                responseTXT.innerHTML = "You found "+cities+" out of 9 cities<br>You have "+score+" km left";
+                responseTXT.innerHTML = "You found "+cities+" out of 9 cities";
                 alert("GAME OVER\nYou found "+cities+" out of 9 cities\nYou have "+score+" km left");
                 setTimeout(function(){
                     questDiv.style.cssText = "visibility:hidden; height:0";
-                    playAgain.style.cssText = "visibility:visible; height: 28%";
-                    kmLeft.style.cssText = "visibility:hidden; height:0"
+                    playAgain.style.cssText = "visibility:visible; height: 33%; padding-top: 20px";
                 },2000)
             }
         })
