@@ -55,7 +55,8 @@ function init(){
                     var lat = parseFloat(coords[1]);
                     var lon = parseFloat(coords[0]);
 
-                    var clickPointer = new ol.layer.Vector({
+                    //This marker gets placed on the position you tap
+                    var clickMarker = new ol.layer.Vector({
                        source: new ol.source.Vector({
                            features: [
                                new ol.Feature({
@@ -64,18 +65,34 @@ function init(){
                            ]
                        })
                     });
-                    var positionPointer = new ol.layer.Vector({
-                        source: new ol.source.Vector({
-                            features: [
-                                new ol.Feature({
-                                 geometry: new ol.geom.Point(ol.proj.fromLonLat([longitude, latitude]))
-                                 })
-                            ]
-                         })
-                    });
+                    map.addLayer(clickMarker); 
 
-                    map.addLayer(clickPointer); //The pointer
-                    map.addLayer(positionPointer); // The true position of the location)
+                    //this marker places itself on the position of the asked city
+                    var features = [];
+                    var iconFeature = new ol.Feature({
+                        geometry: new ol.geom.Point(ol.proj.transform([longitude, latitude], 'EPSG:4326', 'EPSG:3857'))
+                    });
+                  
+                    var iconStyle = new ol.style.Style({
+                        image: new ol.style.Icon(({
+                            anchor: [0.15, 1],
+                            src: "./flag.svg"
+                        }))
+                    });
+                  
+                    iconFeature.setStyle(iconStyle);
+                    features.push(iconFeature);
+
+                    var vectorSource = new ol.source.Vector({
+                        features: features
+                    });
+                    
+                    var positionMarker = new ol.layer.Vector({
+                        source: vectorSource
+                    });
+                    map.addLayer(positionMarker);
+
+                                 
         
                     var dist = distance(latitude, longitude, lat, lon);
 
