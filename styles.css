@@ -58,23 +58,69 @@ html,body {
 .play-again p:hover{
     color: magenta;
 }
-@media (max-width: 1000px){
+@media (max-width: 640px){
     #js-map{
-        height: 50%;
+        height: 75%;
     }
     .info{
-        height: 50%;
+        height: 25%;
     }
     .questiondiv{
         height: auto;   
     }
     .responsediv{
         height: auto;
+        margin-top: 20px;
     }
     .important-info{
         height: auto;
     }
     .play-again{
-        height: auto;
+        height: 0;
+    }
+    .question{
+        font-size: 20px;
+    }
+    .cities-found{
+        font-size: 25px;
+    }
+    .km-left{
+        margin-top: -20px;
+    }
+    .response{
+        margin-top: -20px;
+    }
+}
+@media screen and (max-height: 600px) and (max-width: 640px){
+    #js-map{
+        height: 70%;
+    }
+    .info{
+        height: 30%;
+    }
+}
+@media (orientation:landscape){
+    .responsediv{
+        margin: auto;
+    }
+    .km-left{
+        margin: auto;
+    }
+    .response{
+        margin: auto;
+    }
+    .question{
+        font-size: 20px;
+    }
+    .questiondiv{
+        margin-top: 30px;   
+    }
+}
+@media(max-height: 400px){
+    #js-map{
+        height: 50%;
+    }
+    .info{
+        height: 50%;
     }
 }
