@@ -1,5 +1,13 @@
 window.onload = init;
 
+var citiesFound = document.querySelector(".cities-found");
+var kmLeft = document.querySelector(".km-left");
+var quest = document.querySelector(".question");
+var responseTXT = document.querySelector(".response");
+var playAgain = document.querySelector(".play-again");
+var questDiv = document.querySelector(".questiondiv");
+
+
 function init(){
     const map = new ol.Map({
         view: new ol.View({
@@ -29,12 +37,11 @@ function init(){
     $.when(
         $.getJSON('capitalCities.json')
     ).done( function(json) {
-        console.log(json);
         capitalCities = Array.from(json.capitalCities);
 
         document.querySelector('.map').addEventListener('click', function(){
 
-            if(score>0 && capitalCities.length>1){
+            if(score>0 && capitalCities.length>0){
                 var i = Math.floor(Math.random()*capitalCities.length);
                 var latitude = parseFloat(capitalCities[i].latitude);
                 var longitude = parseFloat(capitalCities[i].longitude);
@@ -73,15 +80,11 @@ function init(){
                     var dist = distance(latitude, longitude, lat, lon);
 
                     if(dist<50){
-                        var response = "You found it!!!"
+                        var response = "You found "+capitalCities[i].capitalCity;
                         capitalCities.splice(i,1);
                         cities++;
-                        if(capitalCities.length<1){
-                            quest.innerHTML = "GAME OVER\nYou found "
-                            alert("You won the game\nYou found all the cities");
-                        }
                     }else{
-                        var response = "You are " + dist.toFixed(2) +" km away from "+capitalCities[i].capitalCity
+                        var response = "You are " + dist.toFixed(2) +" km away from "+capitalCities[i].capitalCity;
                         score = score - dist;
                         score = score.toFixed(2);
                         capitalCities.splice(i,1);
@@ -104,21 +107,13 @@ function init(){
                 setTimeout(function(){
                     questDiv.style.cssText = "visibility:hidden; height:0";
                     playAgain.style.cssText = "visibility:visible; height: 28%";
+                    kmLeft.style.cssText = "visibility:hidden; height:0"
                 },2000)
             }
         })
  
     });
 }
-
-
-var citiesFound = document.querySelector(".cities-found");
-var kmLeft = document.querySelector(".km-left");
-var quest = document.querySelector(".question");
-var responseTXT = document.querySelector(".response");
-var playAgain = document.querySelector(".play-again");
-var questDiv = document.querySelector(".questiondiv");
-
 
 
 function distance(lat1, lon1, lat2, lon2) {

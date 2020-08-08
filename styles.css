@@ -30,15 +30,17 @@ html,body {
 }
     
 .cities-found{
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .questiondiv{
-    height: 33%;   
+    height: 33%;
+    margin-top: 25px;
+    padding-top: 20px;
 }
 .question{
     color:khaki;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .response{
@@ -51,6 +53,7 @@ html,body {
     font-weight: bold;
     align-content: center;
     text-align: center;
+    margin-top: -40px;
 }
 .play-again p{
     cursor: pointer;
@@ -88,7 +91,7 @@ html,body {
         margin-top: -20px;
     }
     .response{
-        margin-top: -20px;
+        margin-top: 35px;
     }
 }
 @media screen and (max-height: 600px) and (max-width: 640px){
@@ -98,27 +101,11 @@ html,body {
     .info{
         height: 30%;
     }
-}
-@media (orientation:landscape){
-    .responsediv{
-        margin: auto;
-    }
-    .km-left{
-        margin: auto;
-    }
-    .response{
-        margin: auto;
-    }
-    .question{
-        font-size: 20px;
-    }
     .questiondiv{
-        margin-top: 30px;   
-    }
-    .play-again{
-        height: 0;
+        margin-top: -20px;
     }
 }
+
 @media(max-height: 425px )and (max-width: 425px){
     #js-map{
         height: 50%;
