@@ -107,8 +107,8 @@ function init(){
                         capitalCities.splice(i,1);
                     }
                     responseTXT.innerHTML = response;
-                    citiesFound.innerHTML = "You found " + cities + " cities";
-                    kmLeft.innerHTML ="You have "+ score + " km left";
+                    citiesFound.innerHTML =  cities + " Cities found";
+                    kmLeft.innerHTML =score + " km left";
                 });
 
                    
@@ -118,12 +118,12 @@ function init(){
                     score=0
                 }
                 quest.innerHTML = "GAME OVER";
-                kmLeft.innerHTML ="You have "+ score + " km left";
+                kmLeft.innerHTML = score + " km left";
                 responseTXT.innerHTML = "You found "+cities+" out of 9 cities";
                 alert("GAME OVER\nYou found "+cities+" out of 9 cities\nYou have "+score+" km left");
                 setTimeout(function(){
                     questDiv.style.cssText = "visibility:hidden; height:0";
-                    playAgain.style.cssText = "visibility:visible; height: 33%; padding-top: 20px";
+                    playAgain.style.cssText = "visibility:visible; height: 28%; padding-top: 21px";
                 },2000)
             }
         })

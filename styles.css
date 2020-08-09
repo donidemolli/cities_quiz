@@ -65,12 +65,12 @@ html,body {
 .play-again p:hover{
     color: magenta;
 }
-@media (max-width: 640px){
+@media (max-width: 570px){
     #js-map{
-        height: 72%;
+        height: 75%;
     }
     .info{
-        height: 28%;
+        height: 25%;
     }
     .questiondiv{
         height: auto;   
@@ -104,7 +104,7 @@ html,body {
         margin-top: 35px;
     }
 }
-@media screen and (max-height: 600px) and (max-width: 640px){
+@media screen and (max-height: 570px) and (max-width: 570px){
     #js-map{
         height: 70%;
     }
@@ -113,11 +113,37 @@ html,body {
     }
 }
 
-@media(max-height: 425px )and (max-width: 425px){
-    #js-map{
-        height: 50%;
+@media(max-height: 550px )and (max-width: 574px){
+    .cities-found{
+        font-size: medium;
     }
+    .km-left{
+        font-size: small;
+    }
+    .question{
+        font-size: medium;
+
+    }
+    .response{
+        font-size: small;
+        margin-top: 25px;
+    }
+    .questiondiv{
+        margin-top: -20px;
+        height: 33%;
+        padding-top: 7px;
+    }
+    .play-again{
+        margin-bottom: auto;
+    }.play-again p{
+        font-size: medium;
+    }
+}
+@media(min-height: 750px)and (max-width:550px){
     .info{
-        height: 50%;
+        height: 20%;
+    }
+    #js-map{
+        height: 80%;
     }
 }
